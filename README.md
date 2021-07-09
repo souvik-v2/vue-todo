@@ -1,19 +1,12 @@
-# vue_prac_1
+# Project setup
+    npm install
 
-## Project setup
-```
-npm install
-```
+# Compiles and hot-reloads for development
+    npm run serve
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Install and Run/Start jason db server to communicate with db.json file
+    npm install -g json-server
 
-### Compiles and minifies for production
-```
-npm run build
-```
+    json-server --watch db.json
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+More Info https://github.com/typicode/json-server

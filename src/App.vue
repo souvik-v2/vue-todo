@@ -1,30 +1,49 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+<Nav />
+  <div class="alert alert-success alert-dismissible fade show text-center" v-if="getNotice !== ''">{{getNotice}}</div>
+  <div class="container-lg h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-md-9 mt-4 mx-auto">
+        <router-view />
+      </div>
+    </div>
   </div>
-  <router-view/>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Nav from './components/Nav.vue'
+import { mapGetters } from 'vuex'
+export default {
+  name: 'App',
+  components: { 
+    Nav 
+  },
+  computed: {
+    ...mapGetters(['getLoginUser', 'getNotice', 'getMyTodo']),
+  },
+  watch: {
+    getNotice(a, b){
+     // console.log('checkForAlert', this.getNotice);
+      setTimeout(() => {
+        this.$store.commit('removeNotice');
+      }, 5000);
+    },
   }
 }
+</script>
+<style>
+body, html {
+  background-image: url('./assets/mountains.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.masthead {
+  margin-top: 20px;
+}
+
+.spinner-border.text-primary.mx-auto.text-center {
+    left: 50%;
+    position: absolute;
+}
+
 </style>
