@@ -9,4 +9,5 @@
 
     json-server --watch db.json
 
-More Info https://github.com/typicode/json-server
+# Firebase URL 
+    https://fir-vue-apps.web.app/

@@ -1,5 +1,5 @@
 <template>
-  <div id="weather-app" :class="weather.cod == '200' && weather.list[0].main.temp > 30 ? 'warm' : ''">
+  <div id="weather-app" :class="weather.cod == '200' && weather.list[0].main.temp > 29 ? 'warm' : ''">
     <main>
         <div class="search-box">
             <input 
@@ -44,6 +44,7 @@ export default {
           .then(res => {
             return res.json();
           }).then(this.setResults);
+           this.query = '';
       }
     },
     setResults (results) {
