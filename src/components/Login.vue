@@ -74,4 +74,9 @@ export default {
   }
 }
 </script>
-
+<style>
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+</style>

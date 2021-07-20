@@ -2,6 +2,7 @@
     <div id="modal">
         <div class="backdrop" @click="hideOrderForm"></div>
         <div class="modalBody">
+            <div class="close" @click="hideOrderForm">X</div>
         <div class="formContainer" id="orderForm">
             <h3 class="text-center">Update Details</h3>
             <form class="orderForm" @submit.prevent="onSubmit">
@@ -91,6 +92,12 @@ export default {
 </script>
 <style>
 .bi {
+  cursor: pointer;
+}
+div.close {
+  display: block;
+  text-align: right;
+  margin: 10px 20px 0 0;
   cursor: pointer;
 }
 </style>

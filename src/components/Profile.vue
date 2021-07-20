@@ -68,6 +68,6 @@ export default {
 </script>
 <style>
 #modal {
-  margin-top: 50%;
+  margin-top: 20%;
 }
 </style>
