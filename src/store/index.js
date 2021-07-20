@@ -16,7 +16,7 @@ export default createStore({
       state.todo = addTodo;
     },
     logoutUser(state) {
-      state.userID = '';
+      state.notice = '';
       state.user = '';
     },
     setNotice(state, info) {

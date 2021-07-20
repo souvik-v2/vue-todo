@@ -3,6 +3,7 @@ import Login from '../components/Login.vue'
 import Todo from '../components/Todo.vue'
 import Profile from '../components/Profile.vue'
 import Register from '../components/Register.vue'
+import Weather from '../components/Weather.vue'
 
 
 import Home from '../views/Home.vue'
@@ -15,7 +16,8 @@ const routes =
   { path: '/login', name: 'Login', component: Login },
   { path: '/register', name: 'Register', component: Register },
   { path: '/todo', name: 'Todo', component: Todo },
-  { path: '/profile', name: 'Profile', component: Profile }
+  { path: '/profile', name: 'Profile', component: Profile },
+  { path: '/weather', name: 'Weather', component: Weather }
 ]
 
 const router = createRouter({

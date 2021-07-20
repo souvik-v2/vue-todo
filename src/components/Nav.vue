@@ -14,12 +14,14 @@
         <div class="navbar-nav ml-auto" v-if="!getLoginUser">
             <router-link to="/" class="nav-item nav-link">Home</router-link>
             <router-link to="/about" class="nav-item nav-link">About</router-link>
+            <router-link to="/weather" class="nav-item nav-link">Weather</router-link>
             <router-link to="/login" class="nav-item nav-link">Login</router-link>
             <router-link to="/register" class="nav-item nav-link">Register</router-link>
         </div>
         <div class="navbar-nav ml-auto" v-if="getLoginUser">
             <router-link to="/" class="nav-item nav-link">Home</router-link>
             <router-link to="/about" class="nav-item nav-link">About</router-link>
+            <router-link to="/weather" class="nav-item nav-link">Weather</router-link>
             <router-link to="/todo" class="nav-item nav-link">Todo</router-link>
             <router-link to="/profile" class="nav-item nav-link">Profile</router-link>
             <a href="javascript:void(0)" @click="logout()" class="nav-item nav-link">Logout</a>

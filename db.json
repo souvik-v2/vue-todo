@@ -7,10 +7,10 @@
       "email": "s@v2.com"
     },
     {
-      "name": "Demo",
+      "id": 2,
+      "name": "Demo User",
       "email": "d@d.c",
-      "password": "d",
-      "id": 2
+      "password": "d"
     }
   ],
   "todo": [
@@ -31,6 +31,18 @@
       "title": "Vuetify",
       "done": false,
       "id": 3
+    },
+    {
+      "user_id": 2,
+      "title": "Vue",
+      "done": false,
+      "id": 4
+    },
+    {
+      "user_id": 2,
+      "title": "vuex",
+      "done": true,
+      "id": 5
     }
   ]
 }
