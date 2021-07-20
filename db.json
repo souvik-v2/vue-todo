@@ -43,6 +43,12 @@
       "title": "vuex",
       "done": true,
       "id": 5
+    },
+    {
+      "user_id": 1,
+      "title": "Weather app",
+      "done": false,
+      "id": 6
     }
   ]
 }

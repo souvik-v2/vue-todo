@@ -1,5 +1,5 @@
 <template>
-<div class="mainBody" id="body">
+<div class="mainBody" id="body" v-if="$store.state.user == ''">
     <div class="container" id="iceCreamBuilder">
       <ice-cream :cart="cart"></ice-cream>
 
@@ -62,18 +62,21 @@
       </div>
       <!-- builder end -->
     </div>
-  </div>
+</div>
+<weather  v-else />
 </template>
 
 <script>
 import IceCream from '../components/IceCream.vue';
 import OrdersForm from '../components/OrdersForm.vue';
+import Weather from '../components/Weather.vue';
 // @ is an alias to /src
 export default {
   name: 'Home',
   components: {
     IceCream,
-    OrdersForm
+    OrdersForm,
+    Weather
   },
   data() {
         return {

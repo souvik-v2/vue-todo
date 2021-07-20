@@ -34,7 +34,7 @@ router.beforeEach((to, from, next) => {
   document.title = documentTitle;
   
   const toPages = ["Todo", "Profile"];
-  const fromPages = ["Todo", "Profile", "Home", "About", "Login"];
+  const fromPages = ["Todo", "Profile", "Home", "About", "Login", "Weather"];
   var checkToPages = toPages.indexOf(to.name);
   var checkFromPages = fromPages.indexOf(from.name);
 
